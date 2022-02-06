@@ -217,3 +217,4 @@ Create and deploy a server using terraform:
     12. Go ot the "IPv1 Public IP" address shown in EC2 Console. You will see the "Your web server" message.
 
 Adopted from: [The FreeCodeCampVideo](https://www.youtube.com/watch?v=SLB_c_ayRMo&ab_channel=freeCodeCamp.org)
+Please, feel free to add any more notes and do PRs.
