@@ -86,10 +86,11 @@ Create and deploy a server using terraform:
             secret_key = "<your_secret_key>"
         }
     3. Create VPC.
-        resource "aws_vpc" "prod-vpc"
-        {
+        resource "aws_vpc" "prod-vpc" {
             cidr_block = "10.0.0.0/16"
-            tags = { Name = "production"}
+            tags = {
+                Name = "production"
+            }
         }
     
     4. Create internet Gateway.
@@ -200,11 +201,13 @@ Create and deploy a server using terraform:
             instance_type = "t2.micro"
             availability_zone = "us-east-1a"
             key_name = "main_key" # that we created in step 1
+            
             network_interface = {
                 device_index = 0
                 network_interface_id = aws_network_interface.web-server-nic.id
             }
             tags = { Name = "web-server"}
+            
             user_data = <<-EOF
                         #!/bin/bash
                         sudo apt-get update - y
@@ -217,4 +220,5 @@ Create and deploy a server using terraform:
     12. Go ot the "IPv1 Public IP" address shown in EC2 Console. You will see the "Your web server" message.
 
 Adopted from: [The FreeCodeCampVideo](https://www.youtube.com/watch?v=SLB_c_ayRMo&ab_channel=freeCodeCamp.org)
-Please, feel free to add any more notes and do PRs.
+
+
