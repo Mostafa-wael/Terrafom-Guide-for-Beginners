@@ -75,6 +75,7 @@ It can also be shown using `terraform output`
 
 **Illustrative Example**:
 Create and deploy a server using terraform:
+![image](https://user-images.githubusercontent.com/56788883/152759159-8cf52055-82d2-435e-a201-00178fc2a05e.png)
 
     1. Create Key-Pair:
         Go to EC2-> Key Pairs, it will allow us to connect to our server once created.
