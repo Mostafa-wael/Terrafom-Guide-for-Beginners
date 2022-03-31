@@ -16,7 +16,7 @@ resource "aws_vpc" "prod-vpc" {
 }
 
 # 2. Create Internet Gateway
-
+# resource "<provider>" "<resource_type>" "<name>" 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.prod-vpc.id
 
